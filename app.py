@@ -28,19 +28,15 @@ app.secret_key = "los_dos_garcias_1994"
 # =====================================================
 
 
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = 'sql3.freesqldatabase.com'
 
-app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_USER'] = 'sql3833668'
 
-app.config['MYSQL_PASSWORD'] = 'admin12345'
+app.config['MYSQL_PASSWORD'] = 'TSVzaYJsk1'
 
-app.config['MYSQL_DB'] = 'los_dos_garcias'
+app.config['MYSQL_DB'] = 'sql3833668'
 
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-
-
-mysql = MySQL(app)
-
 
 
 # =====================================================
