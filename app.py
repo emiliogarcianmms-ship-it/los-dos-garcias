@@ -34,9 +34,7 @@ app.config['MYSQL_USER'] = 'sql3833668'
 
 app.config['MYSQL_PASSWORD'] = 'TSVzaYJsk1'
 
-app.config['MYSQL_DB'] = 'sql3833668'
-
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['MYSQL_DB'] = 'sql3833668''
 
 
 # =====================================================
