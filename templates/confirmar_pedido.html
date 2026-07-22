@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<h1 class="titulo-menu">
+    📝 Confirmar Pedido - LOS DOS GARCIAS
+</h1>
+
+<p class="subtitulo-menu">
+    Completa tus datos para enviar tu pedido a domicilio.
+</p>
+
+
+<div class="formulario-pedido">
+
+
+<form method="POST">
+
+
+<label>
+    Nombre completo
+</label>
+
+<input 
+type="text"
+name="nombre"
+placeholder="Ejemplo: Juan Pérez"
+required
+>
+
+
+<label>
+    Teléfono
+</label>
+
+<input
+type="text"
+name="telefono"
+placeholder="Ejemplo: 7221234567"
+required
+>
+
+
+<label>
+    Dirección de entrega</label>
+
+<textarea
+name="direccion"
+placeholder="Calle, número, colonia y referencias"
+required
+></textarea>
+
+
+
+<label>
+    Método de pago
+</label>
+
+
+<select name="id_pago" required>
+
+<option value="">
+Selecciona una opción
+</option>
+
+<option value="1">
+💵 Efectivo
+</option>
+
+<option value="2">
+🏦 Transferencia
+</option>
+
+<option value="3">
+💳 Tarjeta
+</option>
+
+
+</select>
+
+
+
+<h2>
+Resumen del pedido
+</h2>
+
+
+{% for producto in carrito %}
+
+<div class="resumen-producto">
+
+<p>
+{{ producto.nombre }}
+
+</p>
+
+<p>
+Cantidad:
+{{ producto.cantidad }}
+</p>
+
+<p>
+Subtotal:
+$ {{ "%.2f"|format(producto.subtotal) }}
+
+</p>
+
+<hr>
+
+</div>
+
+
+{% endfor %}
+
+
+
+<h2>
+
+Total:
+$ {{ "%.2f"|format(
+carrito | sum(attribute='subtotal')
+) }}
+
+</h2>
+
+
+
+<button type="submit">
+
+🚚 Confirmar pedido
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+{% endblock %}

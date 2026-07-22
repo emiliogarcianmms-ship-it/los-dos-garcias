@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+
+<h1 class="titulo-menu">
+    📦 Panel de Pedidos - LOS DOS GARCIAS
+</h1>
+
+
+<p class="subtitulo-menu">
+    Administración y control de pedidos.
+</p>
+
+
+
+{% if pedidos %}
+
+
+
+<div class="carrito-container">
+
+
+
+{% for pedido in pedidos %}
+
+
+
+<div class="producto-card carrito-card">
+
+
+
+<div class="producto-info">
+
+
+
+<h2>
+🌮 Pedido #{{ pedido.id_pedido }}
+</h2>
+
+
+
+<hr>
+
+
+
+<div>
+
+
+<a href="/admin/pedido/{{ pedido.id_pedido }}">
+
+<button>
+
+👀 Ver productos
+
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<br>
+
+
+
+<p>
+👤 Cliente:
+<strong>
+{{ pedido.nombre_cliente }}
+</strong>
+</p>
+
+
+
+<p>
+📱 Teléfono:
+{{ pedido.telefono_cliente }}
+</p>
+
+
+
+<p>
+🏠 Dirección:
+{{ pedido.direccion_entrega }}
+</p>
+
+
+
+<p>
+💳 Método de pago:
+{{ pedido.metodo }}
+</p>
+
+
+
+<p>
+📅 Fecha:
+{{ pedido.fecha }}
+</p>
+
+
+
+<h3>
+💰 Total:
+$ {{ "%.2f"|format(pedido.total) }}
+</h3>
+
+
+
+
+<div class="promo">
+
+
+
+<h3>
+📦 Estado actual:
+</h3>
+
+
+
+<p>
+<strong>
+{{ pedido.estado }}
+</strong>
+</p>
+
+
+
+
+<form method="POST"
+action="/admin/actualizar_estado/{{ pedido.id_pedido }}">
+
+
+
+<label>
+Cambiar estado:
+</label>
+
+
+
+<select name="estado">
+
+
+
+<option value="Pedido recibido"
+{% if pedido.estado == "Pedido recibido" %}selected{% endif %}
+>
+📥 Pedido recibido
+</option>
+
+
+
+<option value="En preparación"
+{% if pedido.estado == "En preparación" %}selected{% endif %}
+>
+👨‍🍳 En preparación
+</option>
+
+
+
+<option value="En camino"
+{% if pedido.estado == "En camino" %}selected{% endif %}
+>
+🚚 En camino
+</option>
+
+
+
+<option value="Entregado"
+{% if pedido.estado == "Entregado" %}selected{% endif %}
+>
+✅ Entregado
+</option>
+
+
+
+</select>
+
+
+
+<br><br>
+
+
+
+<button type="submit">
+
+Actualizar estado
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+<br>
+
+
+
+<form method="POST"
+action="/admin/eliminar_pedido/{{ pedido.id_pedido }}"
+onsubmit="return confirm('¿Seguro que deseas eliminar este pedido?');">
+
+
+
+<button type="submit">
+
+🗑️ Eliminar pedido
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+{% else %}
+
+
+
+<div class="card">
+
+
+<h2>
+No hay pedidos registrados.
+</h2>
+
+
+<p>
+Cuando un cliente realice un pedido aparecerá aquí.
+</p>
+
+
+</div>
+
+
+
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+
+<h1 class="titulo-menu">
+    🚚 Seguimiento de Pedido
+</h1>
+
+
+<p class="subtitulo-menu">
+    Ingresa tu número de pedido para consultar el estado.
+</p>
+
+
+
+<div class="formulario-pedido">
+
+
+<form method="POST">
+
+
+<label>
+Número de pedido
+</label>
+
+
+<input 
+type="number"
+name="id_pedido"
+placeholder="Ejemplo: 1"
+required
+>
+
+
+<button type="submit">
+
+🔍 Buscar pedido
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+{% if pedido %}
+
+
+
+<div class="card">
+
+
+
+<h2>
+🌮 Pedido #{{ pedido.id_pedido }}
+</h2>
+
+
+
+<hr>
+
+
+
+<p>
+👤 Cliente:
+<strong>
+{{ pedido.nombre_cliente }}
+</strong>
+</p>
+
+
+
+<p>
+📅 Fecha:
+{{ pedido.fecha }}
+</p>
+
+
+
+<p>
+🏠 Dirección:
+{{ pedido.direccion_entrega }}
+</p>
+
+
+
+<p>
+💳 Pago:
+{{ pedido.metodo }}
+</p>
+
+
+
+<h2>
+💰 Total:
+$ {{ "%.2f"|format(pedido.total) }}
+</h2>
+
+
+
+<div class="promo">
+
+
+<h2>
+Estado actual:
+</h2>
+
+
+<h1>
+{{ pedido.estado }}
+</h1>
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% elif request.method == 'POST' %}
+
+
+
+<div class="card">
+
+
+<h2>
+❌ Pedido no encontrado
+</h2>
+
+
+<p>
+Verifica el número de pedido.
+</p>
+
+
+</div>
+
+
+
+{% endif %}
+
+
+
+{% endblock %}

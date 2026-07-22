@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+
+<h1 class="titulo-menu">
+    🎉 Promociones - LOS DOS GARCIAS
+</h1>
+
+
+<p class="subtitulo-menu">
+    Disfruta nuestras promociones especiales.
+</p>
+
+
+
+{% if promociones %}
+
+
+
+<div class="carrito-container">
+
+
+
+{% for promo in promociones %}
+
+
+
+<div class="producto-card carrito-card">
+
+
+
+<div class="producto-info">
+
+
+
+<h2>
+🎁 {{ promo.nombre }}
+</h2>
+
+
+
+<p>
+{{ promo.descripcion }}
+</p>
+
+
+
+<h3>
+Condición:
+</h3>
+
+
+<p>
+{{ promo.condicion }}
+</p>
+
+
+
+<h3>
+Beneficio:
+</h3>
+
+
+<p>
+{{ promo.beneficio }}
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+{% else %}
+
+
+
+<div class="card">
+
+
+<h2>
+No hay promociones activas.
+</h2>
+
+
+</div>
+
+
+
+{% endif %}
+
+
+
+{% endblock %}

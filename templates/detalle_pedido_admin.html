@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+
+
+<h1 class="titulo-menu">
+
+📦 Detalle del Pedido
+
+</h1>
+
+
+<p class="subtitulo-menu">
+
+Productos incluidos en la orden.
+
+</p>
+
+
+
+{% if detalle %}
+
+
+
+<div class="carrito-container">
+
+
+
+{% for producto in detalle %}
+
+
+
+<div class="producto-card carrito-card">
+
+
+
+<img
+src="{{ url_for('static', filename='img/productos/' + producto.imagen) }}"
+alt="{{ producto.nombre }}"
+>
+
+
+
+<div class="producto-info">
+
+
+
+<h2>
+{{ producto.nombre }}
+</h2>
+
+
+
+<p>
+Cantidad:
+<strong>
+{{ producto.cantidad }}
+</strong>
+</p>
+
+
+
+<p>
+Precio unitario:
+$ {{ "%.2f"|format(producto.precio_unitario) }}
+</p>
+
+
+
+<h3>
+Subtotal:
+$ {{ "%.2f"|format(producto.subtotal) }}
+</h3>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+
+<div class="resumen-pedido">
+
+
+<h2>
+Resumen del pedido
+</h2>
+
+
+<h3>
+
+Total:
+$ {{ "%.2f"|format(detalle[0].total) }}
+
+</h3>
+
+
+<h3>
+
+Estado:
+{{ detalle[0].estado }}
+
+</h3>
+
+
+
+</div>
+
+
+
+{% else %}
+
+
+
+<div class="card">
+
+
+<h2>
+No se encontraron productos.
+</h2>
+
+
+</div>
+
+
+
+{% endif %}
+
+
+
+<br>
+
+
+
+<a href="/admin/pedidos">
+
+<button>
+
+⬅ Volver a pedidos
+
+</button>
+
+</a>
+
+
+
+{% endblock %}

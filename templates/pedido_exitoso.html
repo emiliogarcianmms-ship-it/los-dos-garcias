@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+
+<div class="card pedido-exitoso">
+
+
+    <h1>
+        🌮 ¡Pedido recibido!
+    </h1>
+
+
+    <h2>
+        Gracias por comprar en
+    </h2>
+
+
+    <h2>
+        LOS DOS GARCIAS
+    </h2>
+
+
+    <hr>
+
+
+    <h3>
+        Número de pedido:
+    </h3>
+
+
+    <h1>
+        #{{ id_pedido }}
+    </h1>
+
+
+
+    <div class="promo">
+
+
+        <h3>
+            📦 Estado del pedido
+        </h3>
+
+
+        <p>
+            Pedido recibido
+        </p>
+
+
+    </div>
+
+
+
+    <p>
+        Estamos preparando tus tacos.
+        En breve comenzaremos la entrega.
+    </p>
+
+
+
+    <br>
+
+
+    <a href="/">
+        <button>
+            🏠 Volver al inicio
+        </button>
+    </a>
+
+
+</div>
+
+
+{% endblock %}

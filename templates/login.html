@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<h1 class="titulo-menu">
+    🔐 Iniciar sesión
+</h1>
+
+<p class="subtitulo-menu">
+    Accede a tu cuenta de LOS DOS GARCIAS.
+</p>
+
+
+<div class="formulario-pedido">
+
+
+<form method="POST">
+
+
+<label>
+    Correo
+</label>
+
+<input 
+type="email"
+name="correo"
+placeholder="correo@ejemplo.com"
+required
+>
+
+
+<label>
+    Contraseña
+</label>
+
+<input 
+type="password"
+name="password"
+placeholder="Contraseña"
+required
+>
+
+
+<button type="submit">
+    Ingresar
+</button>
+
+
+</form>
+
+
+</div>
+
+
+{% endblock %}

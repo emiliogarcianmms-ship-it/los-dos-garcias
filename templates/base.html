@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+LOS DOS GARCIAS
+</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- MENU LATERAL -->
+
+<div class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-utensils"></i>
+
+<h2>
+LOS DOS<br>
+GARCIAS
+</h2>
+
+<p>
+Desde 1994
+</p>
+
+</div>
+
+
+
+<nav>
+
+
+<a href="/">
+<i class="fa-solid fa-house"></i>
+Inicio
+</a>
+
+
+
+<a href="/menu">
+<i class="fa-solid fa-taco"></i>
+Menú
+</a>
+
+
+
+<a href="/carrito">
+<i class="fa-solid fa-cart-shopping"></i>
+Mi Pedido
+</a>
+
+
+
+<a href="/promociones">
+<i class="fa-solid fa-gift"></i>
+Promociones
+</a>
+
+
+
+<a href="/seguimiento">
+<i class="fa-solid fa-motorcycle"></i>
+Seguimiento
+</a>
+
+
+
+<a href="/contacto">
+<i class="fa-solid fa-phone"></i>
+Contacto
+</a>
+
+
+
+<a href="/login">
+<i class="fa-solid fa-user"></i>
+Ingresar
+</a>
+
+
+</nav>
+
+
+
+<div class="info">
+
+
+<p>
+🚚 Servicio a domicilio
+</p>
+
+
+<p>
+📅 Jueves - Domingo
+</p>
+
+
+<p>
+⏰ 7:00 PM - 11:00 PM
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- CONTENIDO PRINCIPAL -->
+
+<div class="contenido">
+
+
+{% block contenido %}
+
+{% endblock %}
+
+
+</div>
+
+
+
+</body>
+
+</html>
