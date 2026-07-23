@@ -1,17 +1,20 @@
+```html
 {% extends "base.html" %}
 
 
 {% block contenido %}
 
 
-<div class="card">
+<div class="card inicio-card">
 
 
-<h1 style="color:#d32f2f;">
 
-🌮 Bienvenido a LOS DOS GARCIAS
-
+<h1>
+🌮 Bienvenido a
+<br>
+LOS DOS GARCIAS
 </h1>
+
 
 
 <h2>
@@ -21,7 +24,9 @@
 </h2>
 
 
+
 <br>
+
 
 
 <p>
@@ -31,27 +36,35 @@ Disfruta nuestros tacos tradicionales:
 </p>
 
 
-<ul>
 
-<li>Suadero</li>
+<ul class="lista-tacos">
 
-<li>Bistec</li>
 
-<li>Campechanos</li>
+<li>🌮 Suadero</li>
 
-<li>Tripa</li>
+<li>🌮 Bistec</li>
 
-<li>Chuleta</li>
+<li>🌮 Campechanos</li>
 
-<li>Pollo</li>
+<li>🌮 Tripa</li>
 
-<li>Longaniza</li>
+<li>🌮 Chuleta</li>
+
+<li>🌮 Pollo</li>
+
+<li>🌮 Longaniza</li>
+
 
 </ul>
 
 
+
+
 <br>
 
+
+
+<a href="/menu">
 
 <button>
 
@@ -59,8 +72,17 @@ Pedir ahora
 
 </button>
 
+</a>
+
+
 
 </div>
+
+
+
+{% endblock %}
+```
+
 
 
 
