@@ -1,95 +1,151 @@
+```html
 {% extends "base.html" %}
 
 
 {% block contenido %}
 
 
+
 <h1 class="titulo-menu">
-    🌮 Menú LOS DOS GARCIAS
+
+🌮 Menú LOS DOS GARCIAS
+
 </h1>
 
 
+
 <p class="subtitulo-menu">
-    Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
+
+Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
+
 </p>
+
+
 
 
 
 <div class="productos-container">
 
 
+
 {% for producto in productos %}
+
 
 
 <div class="producto-card">
 
 
-<img 
+
+<img
+
 src="{{ url_for('static', filename='img/productos/' + producto.imagen) }}"
+
 alt="{{ producto.nombre }}"
+
+onerror="this.src='{{ url_for('static', filename='img/productos/sin-imagen.jpg') }}'"
+
 >
+
+
 
 
 <div class="producto-info">
 
 
+
 <h2>
+
 {{ producto.nombre }}
+
 </h2>
 
 
+
+
 <p>
+
 {{ producto.descripcion }}
+
 </p>
 
 
+
+
 <h3>
+
 $ {{ producto.precio }}
+
 </h3>
+
+
 
 
 
 <form action="/agregar_carrito" method="POST">
 
 
-<input 
+
+<input
+
 type="hidden"
+
 name="id_producto"
+
 value="{{ producto.id_producto }}"
+
 >
+
+
 
 
 <button type="submit">
 
+
 <i class="fa-solid fa-cart-plus"></i>
+
 
 Agregar al pedido
 
+
 </button>
+
 
 
 </form>
 
 
+
 </div>
 
 
+
 </div>
+
 
 
 {% endfor %}
 
 
+
 </div>
+
+
+
+
 
 
 
 <div class="promociones-menu">
 
 
+
 <h2>
+
 🎉 Promociones LOS DOS GARCIAS
+
 </h2>
+
+
 
 
 
@@ -97,16 +153,22 @@ Agregar al pedido
 
 
 <h3>
+
 🥤 10 tacos o más
+
 </h3>
 
 
 <p>
+
 Recibe un refresco de 600 ml gratis.
+
 </p>
 
 
 </div>
+
+
 
 
 
@@ -114,12 +176,16 @@ Recibe un refresco de 600 ml gratis.
 
 
 <h3>
+
 🚚 25 tacos o más
+
 </h3>
 
 
 <p>
+
 Envío totalmente gratis.
+
 </p>
 
 
@@ -132,20 +198,35 @@ Envío totalmente gratis.
 
 
 
-<div class="card" style="margin-top:30px;">
 
 
-<h2 style="color:#d32f2f;">
+
+<div class="card servicio">
+
+
+
+<h2>
+
 🚚 Servicio a domicilio
+
 </h2>
 
 
+
 <p>
-<strong>LOS DOS GARCIAS</strong> cuenta únicamente con servicio a domicilio.
+
+<strong>
+LOS DOS GARCIAS
+</strong>
+
+cuenta únicamente con servicio a domicilio.
+
 </p>
+
 
 
 <br>
+
 
 
 <p>
@@ -173,7 +254,14 @@ Envío totalmente gratis.
 </p>
 
 
+
 </div>
+
+
+
+
+{% endblock %}
+```
 
 
 
