@@ -1,31 +1,28 @@
-```html
 {% extends "base.html" %}
 
 
 {% block contenido %}
 
 
-
-<h1 class="titulo-menu">
-
-🌮 Menú LOS DOS GARCIAS
-
-</h1>
+<section class="menu-header">
 
 
+    <h1 class="titulo-menu">
+        🌮 Menú LOS DOS GARCIAS
+    </h1>
 
-<p class="subtitulo-menu">
 
-Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
+    <p class="subtitulo-menu">
+        Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
+    </p>
 
-</p>
 
+</section>
 
 
 
 
 <div class="productos-container">
-
 
 
 {% for producto in productos %}
@@ -36,86 +33,58 @@ Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
 
 
 
-<img
-
-src="{{ url_for('static', filename='img/productos/' + producto.imagen) }}"
-
-alt="{{ producto.nombre }}"
-
-onerror="this.src='{{ url_for('static', filename='img/productos/sin-imagen.jpg') }}'"
-
->
+    <div class="producto-info">
 
 
 
+        <h2>
+            {{ producto.nombre }}
+        </h2>
 
-<div class="producto-info">
+
+
+        <p class="descripcion-producto">
+            {{ producto.descripcion }}
+        </p>
 
 
 
-<h2>
-
-{{ producto.nombre }}
-
-</h2>
+        <h3>
+            ${{ "%.2f"|format(producto.precio) }}
+        </h3>
 
 
 
 
-<p>
-
-{{ producto.descripcion }}
-
-</p>
+        <form action="/agregar_carrito" method="POST">
 
 
 
-
-<h3>
-
-$ {{ producto.precio }}
-
-</h3>
+            <input 
+            type="hidden"
+            name="id_producto"
+            value="{{ producto.id_producto }}"
+            >
 
 
 
 
+            <button class="btn-carrito" type="submit">
 
-<form action="/agregar_carrito" method="POST">
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Agregar al pedido
+
+            </button>
 
 
 
-<input
-
-type="hidden"
-
-name="id_producto"
-
-value="{{ producto.id_producto }}"
-
->
+        </form>
 
 
 
 
-<button type="submit">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-
-Agregar al pedido
-
-
-</button>
-
-
-
-</form>
-
-
-
-</div>
+    </div>
 
 
 
@@ -133,36 +102,27 @@ Agregar al pedido
 
 
 
-
-
-<div class="promociones-menu">
+<section class="promociones-menu">
 
 
 
 <h2>
-
 🎉 Promociones LOS DOS GARCIAS
-
 </h2>
 
 
 
 
-
 <div class="promo">
 
 
 <h3>
-
 🥤 10 tacos o más
-
 </h3>
 
 
 <p>
-
 Recibe un refresco de 600 ml gratis.
-
 </p>
 
 
@@ -176,16 +136,12 @@ Recibe un refresco de 600 ml gratis.
 
 
 <h3>
-
 🚚 25 tacos o más
-
 </h3>
 
 
 <p>
-
 Envío totalmente gratis.
-
 </p>
 
 
@@ -193,40 +149,32 @@ Envío totalmente gratis.
 
 
 
-</div>
+</section>
 
 
 
 
 
 
-
-<div class="card servicio">
+<section class="card contacto-menu">
 
 
 
 <h2>
-
 🚚 Servicio a domicilio
-
 </h2>
 
 
 
 <p>
-
-<strong>
-LOS DOS GARCIAS
-</strong>
-
+<strong>LOS DOS GARCIAS</strong>
 cuenta únicamente con servicio a domicilio.
-
 </p>
 
 
 
-<br>
 
+<div class="datos-contacto">
 
 
 <p>
@@ -259,9 +207,7 @@ cuenta únicamente con servicio a domicilio.
 
 
 
-
-{% endblock %}
-```
+</section>
 
 
 
