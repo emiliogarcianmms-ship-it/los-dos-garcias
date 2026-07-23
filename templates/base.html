@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,7 +13,9 @@ LOS DOS GARCIAS
 </title>
 
 
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
 
 
 <link rel="stylesheet"
@@ -29,12 +30,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 
-<!-- ===========================
-     MENU LATERAL
-=========================== -->
+<!-- BOTON MENU CELULAR -->
+
+<button class="menu-toggle" onclick="abrirMenu()">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
 
 
-<div class="sidebar">
+
+
+
+<!-- MENU LATERAL -->
+
+<div class="sidebar" id="sidebar">
+
+
 
 
 
@@ -60,7 +72,9 @@ Desde 1994
 
 
 
+
 <nav>
+
 
 
 <a href="/">
@@ -159,6 +173,7 @@ Ingresar
 
 
 
+
 <div class="info">
 
 
@@ -181,18 +196,19 @@ Ingresar
 
 
 
+
+
 </div>
 
 
 
 
 
-<!-- ===========================
-     CONTENIDO
-=========================== -->
 
+<!-- CONTENIDO PRINCIPAL -->
 
 <div class="contenido">
+
 
 
 {% block contenido %}
@@ -200,7 +216,30 @@ Ingresar
 {% endblock %}
 
 
+
 </div>
+
+
+
+
+
+
+
+<script>
+
+
+function abrirMenu(){
+
+
+document.getElementById("sidebar").classList.toggle("activo");
+
+
+}
+
+
+</script>
+
+
 
 
 
@@ -208,4 +247,3 @@ Ingresar
 
 
 </html>
-```
