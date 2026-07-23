@@ -35,6 +35,7 @@ app.config['MYSQL_USER'] = 'sql3833668'
 app.config['MYSQL_PASSWORD'] = 'TSVzaYJsk1'
 
 app.config['MYSQL_DB'] = 'los_dos_garcias'
+mysql = MySQL(app)
 
 
 
