@@ -26,7 +26,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 
-<div class="sidebar">
+<!-- BOTON CELULAR -->
+
+<button class="menu-toggle">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+
+
+<!-- MENU LATERAL -->
+
+<aside class="sidebar">
 
 
 <div class="logo">
@@ -60,7 +70,7 @@ Desde 1994
 
 
 <a href="/menu">
-<i class="fa-solid fa-burger"></i>
+<i class="fa-solid fa-utensils"></i>
 <span>Menú</span>
 </a>
 
@@ -100,38 +110,39 @@ Desde 1994
 </a>
 
 
+
 </nav>
+
 
 
 
 <div class="info">
 
-
 <p>
 🚚 Servicio a domicilio
 </p>
-
 
 <p>
 📅 Jueves - Domingo
 </p>
 
-
 <p>
 ⏰ 7:00 PM - 11:00 PM
 </p>
 
-
 </div>
 
 
 
-</div>
+</aside>
 
 
 
 
-<div class="contenido">
+
+<!-- CONTENIDO -->
+
+<main class="contenido">
 
 
 {% block contenido %}
@@ -139,10 +150,11 @@ Desde 1994
 {% endblock %}
 
 
-</div>
+</main>
 
 
 
 </body>
+
 
 </html>
