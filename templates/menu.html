@@ -29,7 +29,6 @@
 <div class="productos-container">
 
 
-
 {% for producto in productos %}
 
 
@@ -38,19 +37,9 @@
 
 
 
-    <div class="producto-imagen">
+    <div class="producto-icono">
 
-
-        {% if producto.imagen %}
-
-            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
-
-        {% else %}
-
-            🌮
-
-        {% endif %}
-
+        🌮
 
     </div>
 
@@ -84,7 +73,7 @@
 
         <div class="precio-producto">
 
-            ${{ producto.precio }}
+            $ {{ producto.precio }}
 
         </div>
 
@@ -93,6 +82,7 @@
 
 
         <form action="/agregar_carrito" method="POST">
+
 
 
             <input
@@ -107,15 +97,17 @@
 
 
 
+
             <button class="btn-carrito" type="submit">
 
 
                 <i class="fa-solid fa-cart-plus"></i>
 
-                Agregar pedido
+                Agregar al pedido
 
 
             </button>
+
 
 
 
@@ -126,8 +118,8 @@
     </div>
 
 
-</div>
 
+</div>
 
 
 
@@ -144,34 +136,67 @@
 
 
 
+<!-- PROMOCIONES -->
+
+
 <div class="promociones-menu">
 
 
 
-<h2>
+    <h2>
 
-🎉 PROMOCIONES LOS DOS GARCIAS
+        🎉 PROMOCIONES LOS DOS GARCIAS
 
-</h2>
-
-
+    </h2>
 
 
-<div class="promo promo-coca">
 
 
-<h3>
-
-🥤 Compra 10 tacos o más
-
-</h3>
+    <div class="promo promo-coca">
 
 
-<p>
+        <h3>
 
-¡Te regalamos una Coca-Cola de 1 litro!
+            🥤 Compra 10 tacos o más
 
-</p>
+        </h3>
+
+
+
+        <p>
+
+            Recibe una Coca-Cola de 1 litro totalmente gratis.
+
+        </p>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="promo promo-envio">
+
+
+        <h3>
+
+            🚚 Compra 25 tacos o más
+
+        </h3>
+
+
+
+        <p>
+
+            Tu envío es completamente gratis.
+
+        </p>
+
+
+    </div>
+
 
 
 </div>
@@ -181,74 +206,48 @@
 
 
 
-<div class="promo promo-envio">
 
-
-<h3>
-
-🚚 Compra 25 tacos o más
-
-</h3>
-
-
-<p>
-
-¡Tu envío es completamente gratis!
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
+<!-- CONTACTO -->
 
 
 <div class="card contacto-menu">
 
 
-<h2>
 
-🚚 Servicio a domicilio
+    <h2>
 
-</h2>
+        🚚 Servicio a domicilio
 
-
-
-<p>
-
-📅 Jueves a Domingo
-
-</p>
+    </h2>
 
 
-<p>
 
-⏰ 7:00 PM - 11:00 PM
+    <p>
 
-</p>
+        📅 Jueves a Domingo
+
+    </p>
 
 
-<p>
 
-📞 747 427 5925
+    <p>
 
-</p>
+        ⏰ 7:00 PM - 11:00 PM
+
+    </p>
+
+
+
+    <p>
+
+        📞 747 427 5925
+
+    </p>
 
 
 
 </div>
 
-
-
-
-{% endblock %}
 
 
 {% endblock %}
