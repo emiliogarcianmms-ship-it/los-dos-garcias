@@ -3,109 +3,188 @@
 {% block contenido %}
 
 
-<h1 class="titulo-menu">
-🛒 Mi Pedido - LOS DOS GARCIAS
-</h1>
+
+<div class="menu-header">
 
 
-<p class="subtitulo-menu">
-Revisa tus productos antes de confirmar.
-</p>
+    <h1 class="titulo-menu">
+
+        🛒 MI PEDIDO - LOS DOS GARCIAS
+
+    </h1>
+
+
+
+    <p class="subtitulo-menu">
+
+        Revisa tus productos antes de confirmar.
+
+    </p>
+
+
+</div>
+
+
 
 
 
 {% if carrito %}
 
 
+
+
+
 <div class="carrito-container">
+
+
+
 
 
 {% for producto in carrito %}
 
 
-<div class="producto-card carrito-card">
 
 
-<div class="producto-icono">
-🌮
+<div class="carrito-card">
+
+
+
+    <div class="carrito-icono">
+
+        🌮
+
+    </div>
+
+
+
+
+    <div class="carrito-info">
+
+
+        <h2>
+
+            {{ producto.nombre }}
+
+        </h2>
+
+
+
+
+        <div class="cantidad-carrito">
+
+
+
+            <a href="/restar_carrito/{{ producto.id_producto }}">
+
+
+                <button class="btn-cantidad">
+
+                    <i class="fa-solid fa-minus"></i>
+
+                </button>
+
+
+            </a>
+
+
+
+
+
+            <span class="cantidad-numero">
+
+                {{ producto.cantidad }}
+
+            </span>
+
+
+
+
+
+            <a href="/sumar_carrito/{{ producto.id_producto }}">
+
+
+                <button class="btn-cantidad">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+
+            </a>
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="subtotal-producto">
+
+
+            Subtotal:
+
+
+            <strong>
+
+                $ {{ "%.2f"|format(producto.subtotal) }}
+
+            </strong>
+
+
+        </div>
+
+
+
+
+
+
+
+        <a href="/eliminar_carrito/{{ producto.id_producto }}">
+
+
+
+            <button class="btn-eliminar">
+
+
+                <i class="fa-solid fa-trash"></i>
+
+                Eliminar
+
+
+            </button>
+
+
+
+
+        </a>
+
+
+
+    </div>
+
+
+
+
 </div>
 
 
 
-<div class="producto-info">
-
-
-<h2>
-{{ producto.nombre }}
-</h2>
-
-
-
-<div class="cantidad-carrito">
-
-
-<a href="/restar_carrito/{{ producto.id_producto }}">
-<button class="btn-cantidad">
-<i class="fa-solid fa-minus"></i>
-</button>
-</a>
-
-
-
-<span class="cantidad-numero">
-{{ producto.cantidad }}
-</span>
-
-
-
-<a href="/sumar_carrito/{{ producto.id_producto }}">
-<button class="btn-cantidad">
-<i class="fa-solid fa-plus"></i>
-</button>
-</a>
-
-
-</div>
-
-
-
-
-<p class="subtotal-producto">
-
-Subtotal:
-
-<strong>
-$ {{ "%.2f"|format(producto.subtotal) }}
-</strong>
-
-</p>
-
-
-
-<a href="/eliminar_carrito/{{ producto.id_producto }}">
-
-<button class="btn-eliminar">
-
-<i class="fa-solid fa-trash"></i>
-
-Eliminar
-
-</button>
-
-</a>
-
-
-
-</div>
-
-
-</div>
 
 
 {% endfor %}
 
 
+
+
+
 </div>
+
+
+
 
 
 
@@ -113,90 +192,172 @@ Eliminar
 <div class="resumen-pedido">
 
 
+
 <h2>
-Resumen del pedido
+
+    🧾 Resumen del pedido
+
 </h2>
 
 
-<h3>
-Total:
-$ {{ "%.2f"|format(total) }}
-</h3>
+
+
+<div class="total-compra">
+
+
+    Total:
+
+    <strong>
+
+        $ {{ "%.2f"|format(total) }}
+
+    </strong>
+
+
+</div>
+
+
+
 
 
 
 {% if refresco_gratis %}
 
-<div class="promo">
+
+
+<div class="beneficio coca">
+
 
 <h3>
-🥤 Refresco gratis
+
+🥤 ¡Promoción desbloqueada!
+
 </h3>
 
+
 <p>
-Promoción aplicada.
+
+Coca-Cola de 1 litro gratis por comprar 10 tacos o más.
+
 </p>
+
 
 </div>
 
+
+
 {% endif %}
+
+
+
+
 
 
 
 {% if envio_gratis %}
 
-<div class="promo">
+
+
+<div class="beneficio envio">
+
 
 <h3>
-🚚 Envío gratis
+
+🚚 ¡Envío gratis!
+
 </h3>
 
+
 <p>
-Promoción aplicada.
+
+Tu pedido cumple la promoción de 25 tacos o más.
+
 </p>
 
+
 </div>
+
+
 
 {% endif %}
 
 
 
+
+
 <a href="/confirmar_pedido">
 
-<button>
-Confirmar pedido
+
+<button class="btn-confirmar">
+
+
+    Confirmar pedido
+
 </button>
+
 
 </a>
 
 
+
 </div>
+
+
+
+
 
 
 
 {% else %}
 
 
-<div class="card">
+
+
+
+<div class="pedido-vacio">
+
 
 <h2>
-Tu pedido está vacío 🌮
+
+    Tu pedido está vacío 🌮
+
 </h2>
+
+
+
+<p>
+
+Agrega tus tacos favoritos para comenzar.
+
+</p>
+
+
 
 
 <a href="/menu">
 
+
 <button>
-Ver menú
+
+    Ver menú
+
 </button>
 
+
 </a>
+
 
 
 </div>
 
 
+
+
+
 {% endif %}
+
+
+
 
 
 {% endblock %}
