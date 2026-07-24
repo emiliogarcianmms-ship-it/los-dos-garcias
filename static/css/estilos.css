@@ -1345,3 +1345,387 @@ button{
 
 
 }
+/* =====================================
+   CARRITO MODERNO
+===================================== */
+
+
+.carrito-container{
+
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+.carrito-card{
+
+
+    background:#1A1A1A;
+
+
+    border-radius:30px;
+
+
+    overflow:hidden;
+
+
+    border:2px solid #FF7A00;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.4);
+
+
+}
+
+
+
+
+
+.carrito-icono{
+
+
+    height:130px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:75px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #E53935,
+
+        #FF7A00
+
+    );
+
+
+}
+
+
+
+
+
+.carrito-info{
+
+
+    padding:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.carrito-info h2{
+
+
+    color:#FFC107;
+
+
+}
+
+
+
+
+
+.cantidad-carrito{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+
+
+.btn-cantidad{
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    padding:0;
+
+
+    background:#FF7A00;
+
+
+}
+
+
+
+
+
+.cantidad-numero{
+
+
+    color:#FFC107;
+
+
+    font-size:30px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+.subtotal-producto{
+
+
+    color:#2ECC71;
+
+
+    font-size:20px;
+
+
+    margin:20px;
+
+
+}
+
+
+
+
+
+.btn-eliminar{
+
+
+    background:#E53935;
+
+
+    color:white;
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+.resumen-pedido{
+
+
+    margin-top:40px;
+
+
+    padding:35px;
+
+
+    background:#1A1A1A;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    border:3px solid #FFC107;
+
+
+}
+
+
+
+
+
+.resumen-pedido h2{
+
+
+    color:#FFC107;
+
+
+}
+
+
+
+
+
+.total-compra{
+
+
+    margin:25px;
+
+
+    color:#2ECC71;
+
+
+    font-size:35px;
+
+
+}
+
+
+
+
+
+.beneficio{
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+
+
+.beneficio h3{
+
+
+    color:#111;
+
+
+}
+
+
+
+
+
+.beneficio p{
+
+
+    color:#111;
+
+
+}
+
+
+
+
+
+.coca{
+
+
+    background:#E53935;
+
+
+}
+
+
+
+
+
+.envio{
+
+
+    background:#2ECC71;
+
+
+}
+
+
+
+
+
+.btn-confirmar{
+
+
+    background:#FF7A00;
+
+
+    font-size:20px;
+
+
+    padding:18px 50px;
+
+
+}
+
+
+
+
+
+.btn-confirmar:hover{
+
+
+    background:#FFC107;
+
+
+}
+
+
+
+
+
+.pedido-vacio{
+
+
+    background:#1A1A1A;
+
+
+    padding:40px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    color:#FFC107;
+
+
+}
