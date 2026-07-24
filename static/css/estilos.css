@@ -1,6 +1,7 @@
 /* =====================================
    LOS DOS GARCIAS
-   DISEÑO MODERNO DARK
+   DISEÑO MODERNO OSCURO
+   COLORES: NEGRO / NARANJA / ROJO
 ===================================== */
 
 
@@ -8,22 +9,33 @@
 
 :root{
 
-    --negro:#0F0F0F;
-    --fondo:#111111;
-    --gris:#1A1A1A;
-    --gris2:#262626;
+    --negro:#0B0B0B;
 
-    --blanco:#FFFFFF;
-    --texto:#222222;
-    --texto-gris:#666666;
+    --fondo:#111111;
+
+    --panel:#1A1A1A;
+
+    --panel2:#242424;
+
 
     --naranja:#FF7A00;
+
+    --naranja-claro:#FFB74D;
+
     --amarillo:#FFC107;
+
     --rojo:#E53935;
+
     --verde:#2ECC71;
+
     --azul:#2196F3;
 
+
+    --texto:#FFB74D;
+
 }
+
+
 
 
 
@@ -35,7 +47,9 @@
 *{
 
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 
     font-family:'Poppins',sans-serif;
@@ -71,35 +85,45 @@ a{
 
 .sidebar{
 
+
     position:fixed;
 
     left:0;
+
     top:0;
+
 
     width:280px;
 
+
     height:100vh;
+
 
 
     background:var(--negro);
 
 
+
     border-right:4px solid var(--naranja);
 
-
-    color:white;
 
 
     padding:25px;
 
 
+
     box-shadow:
-    8px 0 25px rgba(0,0,0,.45);
+
+    8px 0 25px rgba(0,0,0,.6);
+
 
 
     z-index:1000;
 
+
 }
+
+
 
 
 
@@ -110,9 +134,12 @@ a{
 
 .logo{
 
+
     text-align:center;
 
+
     margin-bottom:35px;
+
 
 }
 
@@ -120,11 +147,12 @@ a{
 
 .logo i{
 
+
     font-size:55px;
+
 
     color:var(--naranja);
 
-    margin-bottom:10px;
 
 }
 
@@ -132,11 +160,18 @@ a{
 
 .logo h2{
 
+
+    margin-top:10px;
+
+
+    color:var(--naranja);
+
+
     font-size:30px;
 
-    color:white;
 
     letter-spacing:3px;
+
 
 }
 
@@ -144,11 +179,15 @@ a{
 
 .logo p{
 
-    color:#999;
+
+    color:var(--amarillo);
+
 
     font-weight:bold;
 
+
 }
+
 
 
 
@@ -165,25 +204,32 @@ a{
 
     display:flex;
 
+
     align-items:center;
 
 
     gap:15px;
 
 
-    color:white;
+
+    color:var(--naranja-claro);
 
 
-    padding:15px 18px;
+
+    padding:15px;
+
 
 
     margin:10px 0;
 
 
-    border-radius:14px;
+
+    border-radius:15px;
+
 
 
     font-size:17px;
+
 
 
     transition:.3s;
@@ -198,9 +244,9 @@ a{
 
     width:25px;
 
+
     color:var(--naranja);
 
-    font-size:20px;
 
 
 }
@@ -210,10 +256,12 @@ a{
 .sidebar nav a:hover{
 
 
-    background:var(--naranja);
+    background:var(--rojo);
 
 
-    color:black;
+
+    color:#111;
+
 
 
     transform:translateX(8px);
@@ -226,9 +274,12 @@ a{
 .sidebar nav a:hover i{
 
 
-    color:black;
+    color:#111;
+
 
 }
+
+
 
 
 
@@ -244,25 +295,27 @@ a{
 
     position:absolute;
 
+
     bottom:25px;
 
 
     width:230px;
 
 
-    background:#1D1D1D;
+
+    background:#171717;
 
 
-    border:1px solid #333;
+
+    border:1px solid var(--naranja);
+
 
 
     border-radius:15px;
 
 
+
     padding:18px;
-
-
-    color:#CCC;
 
 
 }
@@ -271,9 +324,15 @@ a{
 
 .info p{
 
+
+    color:var(--amarillo);
+
+
     margin:10px 0;
 
+
 }
+
 
 
 
@@ -303,63 +362,54 @@ a{
 .card{
 
 
-    background:white;
+    background:var(--panel);
 
 
-    color:#222;
+    border:1px solid #333;
+
+
+    color:var(--naranja-claro);
+
 
 
     padding:30px;
 
 
+
     border-radius:25px;
 
 
-    box-shadow:
-
-    0 5px 20px rgba(0,0,0,.25);
-
-
 }
 
 
 
 
 
-h1,
-h2,
-h3,
-h4{
 
-    color:#222;
+
+/* TITULOS */
+
+
+h1,h2,h3,h4{
+
+
+    color:var(--naranja);
+
 
 }
-
-
 
 
 
 p{
 
-    color:#444;
+
+    color:var(--naranja-claro);
+
 
 }
 
 
 
-
-
-/* =====================================
-   BOTON MOVIL
-===================================== */
-
-
-.menu-toggle{
-
-
-    display:none;
-
-}
 
 
 
@@ -376,22 +426,29 @@ button{
     background:var(--naranja);
 
 
-    color:white;
+
+    color:#111;
+
 
 
     border:none;
 
 
+
     padding:13px 25px;
 
 
-    border-radius:15px;
+
+    border-radius:30px;
+
 
 
     cursor:pointer;
 
 
-    font-size:16px;
+
+    font-weight:bold;
+
 
 
     transition:.3s;
@@ -404,13 +461,16 @@ button{
 button:hover{
 
 
-    background:#ff922b;
+    background:var(--amarillo);
 
 
-    transform:translateY(-3px);
+
+    transform:scale(1.05);
 
 
 }
+
+
 
 
 
@@ -426,9 +486,8 @@ button:hover{
 
     text-align:center;
 
+
 }
-
-
 
 
 
@@ -437,22 +496,26 @@ button:hover{
 
     color:var(--naranja);
 
+
     font-size:40px;
 
+
 }
-
-
 
 
 
 .subtitulo-menu{
 
 
-    color:#ccc;
+    color:var(--amarillo);
+
 
     font-size:20px;
 
+
 }
+
+
 
 
 
@@ -464,8 +527,11 @@ button:hover{
     display:grid;
 
 
+
     grid-template-columns:
+
     repeat(auto-fit,minmax(260px,1fr));
+
 
 
     gap:25px;
@@ -477,24 +543,28 @@ button:hover{
 
 
 
+
 .producto-card{
 
 
-    background:white;
+    background:var(--panel);
+
+
+
+    border:2px solid var(--naranja);
+
 
 
     border-radius:25px;
 
 
+
     overflow:hidden;
 
 
-    box-shadow:
-
-    0 8px 25px rgba(0,0,0,.35);
-
 
     transition:.3s;
+
 
 
 }
@@ -509,7 +579,14 @@ button:hover{
     transform:translateY(-8px);
 
 
+
+    box-shadow:
+
+    0 10px 30px rgba(255,122,0,.3);
+
+
 }
+
 
 
 
@@ -519,11 +596,11 @@ button:hover{
 
     padding:25px;
 
+
     text-align:center;
 
+
 }
-
-
 
 
 
@@ -532,20 +609,18 @@ button:hover{
 
     color:var(--naranja);
 
+
 }
-
-
 
 
 
 .descripcion-producto{
 
 
-    color:#555;
+    color:var(--naranja-claro);
+
 
 }
-
-
 
 
 
@@ -554,9 +629,12 @@ button:hover{
 
     color:var(--verde);
 
+
     font-size:28px;
 
+
 }
+
 
 
 
@@ -567,6 +645,7 @@ button:hover{
 
     background:var(--naranja);
 
+
 }
 
 
@@ -576,7 +655,11 @@ button:hover{
 
     background:var(--rojo);
 
+
 }
+
+
+
 
 
 
@@ -590,13 +673,11 @@ button:hover{
 .promociones-menu{
 
 
-    margin-top:40px;
-
-
     background:var(--amarillo);
 
 
     padding:25px;
+
 
 
     border-radius:25px;
@@ -611,22 +692,25 @@ button:hover{
 
     color:#111;
 
-    text-align:center;
 
 }
+
 
 
 
 .promo{
 
 
-    background:white;
+    background:#111;
+
+
+
+    border:2px solid var(--naranja);
+
 
 
     padding:20px;
 
-
-    margin:15px 0;
 
 
     border-radius:15px;
@@ -636,14 +720,14 @@ button:hover{
 
 
 
-
-
 .promo h3{
 
 
     color:var(--verde);
 
+
 }
+
 
 
 
@@ -663,7 +747,9 @@ button:hover{
 
 
     grid-template-columns:
+
     repeat(auto-fit,minmax(260px,1fr));
+
 
 
     gap:25px;
@@ -674,19 +760,21 @@ button:hover{
 
 
 
+
+
 .carrito-card{
 
 
-    background:white;
+    background:var(--panel);
 
 
-    color:#222;
 
+    border:2px solid var(--amarillo);
 
-    border:3px solid var(--amarillo);
 
 
     border-radius:20px;
+
 
 
     padding:20px;
@@ -697,19 +785,20 @@ button:hover{
 
 
 
+
 .resumen-pedido{
 
 
-    margin-top:30px;
+    background:var(--panel);
 
 
-    background:white;
 
+    border:2px solid var(--naranja);
 
-    color:#222;
 
 
     padding:25px;
+
 
 
     border-radius:25px;
@@ -726,6 +815,8 @@ button:hover{
 
     background:var(--rojo);
 
+
+
 }
 
 
@@ -733,7 +824,8 @@ button:hover{
 .btn-eliminar:hover{
 
 
-    background:#b71c1c;
+    background:#B71C1C;
+
 
 }
 
@@ -760,6 +852,7 @@ button:hover{
     align-items:center;
 
 
+
     gap:20px;
 
 
@@ -767,12 +860,11 @@ button:hover{
 
 
 
-
-
 .btn-cantidad{
 
 
     width:45px;
+
 
     height:45px;
 
@@ -787,19 +879,19 @@ button:hover{
 
 
 
-
-
 .cantidad-numero{
 
 
-    color:#222;
+    color:var(--amarillo);
+
 
     font-size:25px;
 
-    font-weight:bold;
-
 
 }
+
+
+
 
 
 
@@ -816,25 +908,25 @@ button:hover{
     height:120px;
 
 
+
     display:flex;
+
 
 
     justify-content:center;
 
 
+
     align-items:center;
 
 
-    background:
 
-    linear-gradient(
-        135deg,
-        #222,
-        #444
-    );
+    background:#222;
+
 
 
     color:var(--naranja);
+
 
 
     font-size:60px;
@@ -846,9 +938,24 @@ button:hover{
 
 
 
+
+
+
 /* =====================================
-   RESPONSIVE
+   MOVIL
 ===================================== */
+
+
+.menu-toggle{
+
+
+    display:none;
+
+
+}
+
+
+
 
 
 @media(max-width:800px){
@@ -866,27 +973,31 @@ button:hover{
 
     top:15px;
 
+
     left:15px;
 
-
-    z-index:2000;
 
 
     width:50px;
 
+
     height:50px;
+
 
 
     border-radius:50%;
 
 
+
     background:var(--naranja);
 
 
-    color:white;
+
+    z-index:2000;
 
 
 }
+
 
 
 
@@ -896,9 +1007,13 @@ button:hover{
 
     left:-280px;
 
+
     transition:.3s;
 
+
 }
+
+
 
 
 
@@ -907,8 +1022,8 @@ button:hover{
 
     left:0;
 
-}
 
+}
 
 
 
@@ -935,8 +1050,8 @@ button:hover{
 
     grid-template-columns:1fr;
 
-}
 
+}
 
 
 
@@ -950,11 +1065,11 @@ button{
 
 
 
-
 .info{
 
 
     display:none;
+
 
 }
 
