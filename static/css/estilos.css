@@ -1076,39 +1076,50 @@ button{
 
 }
 /* =====================================
-   HERO PRINCIPAL
+   INICIO MODERNO CON TARJETAS
 ===================================== */
 
 
-.hero-inicio{
+.inicio-moderno{
 
 
-    min-height:85vh;
+    max-width:1100px;
+
+    margin:auto;
+
+}
 
 
-    display:flex;
 
 
-    justify-content:center;
+
+.bienvenida-card{
 
 
-    align-items:center;
+    background:
+
+    linear-gradient(
+        135deg,
+        #E53935,
+        #FF7A00
+    );
+
+
+    padding:45px;
+
+
+    border-radius:35px;
 
 
     text-align:center;
 
 
-    background:
+    color:#111;
 
-    radial-gradient(
 
-        circle at top,
+    box-shadow:
 
-        #3a1c00,
-
-        #111 55%
-
-    );
+    0 15px 40px rgba(0,0,0,.4);
 
 
 }
@@ -1117,51 +1128,34 @@ button{
 
 
 
-.hero-contenido{
+.logo-restaurante{
 
 
-    max-width:850px;
+    font-size:75px;
 
 
-    padding:40px;
+    background:#FFC107;
 
 
-}
+    width:120px;
 
 
-
-
-
-.marca{
-
-
-    width:100px;
-
-
-    height:100px;
-
-
-    margin:auto;
+    height:120px;
 
 
     display:flex;
 
 
-    align-items:center;
-
-
     justify-content:center;
 
 
+    align-items:center;
+
+
+    margin:auto;
+
+
     border-radius:50%;
-
-
-    background:#FF7A00;
-
-
-    box-shadow:
-
-    0 0 35px rgba(255,122,0,.5);
 
 
 }
@@ -1170,10 +1164,16 @@ button{
 
 
 
-.marca i{
+.bienvenida-card h1{
 
 
-    font-size:50px;
+    margin-top:25px;
+
+
+    font-size:55px;
+
+
+    letter-spacing:4px;
 
 
     color:#111;
@@ -1185,24 +1185,10 @@ button{
 
 
 
-.hero-contenido h1{
+.bienvenida-card h2{
 
 
-    margin-top:30px;
-
-
-    font-size:65px;
-
-
-    letter-spacing:5px;
-
-
-    color:#FF7A00;
-
-
-    text-shadow:
-
-    0 5px 20px rgba(255,122,0,.3);
+    color:#FFF3CD;
 
 
 }
@@ -1211,40 +1197,16 @@ button{
 
 
 
-.hero-contenido h2{
+.bienvenida-card p{
 
 
-    margin-top:15px;
-
-
-    color:#FFC107;
-
-
-    font-size:32px;
-
-
-}
-
-
-
-
-
-.hero-contenido p{
-
-
-    margin:30px auto;
-
-
-    max-width:650px;
+    color:#111;
 
 
     font-size:20px;
 
 
-    line-height:1.7;
-
-
-    color:#FFB74D;
+    margin-top:15px;
 
 
 }
@@ -1253,19 +1215,18 @@ button{
 
 
 
-.especialidades{
+.opciones-inicio{
 
 
-    display:flex;
+    display:grid;
 
 
-    justify-content:center;
+    grid-template-columns:
+
+    repeat(3,1fr);
 
 
-    flex-wrap:wrap;
-
-
-    gap:15px;
+    gap:25px;
 
 
     margin:35px 0;
@@ -1277,70 +1238,19 @@ button{
 
 
 
-.especialidades span{
+.tarjeta-opcion{
 
 
-    padding:12px 25px;
+    padding:30px;
 
 
-    border-radius:30px;
-
-
-    background:#1A1A1A;
-
-
-    border:1px solid #FF7A00;
-
-
-    color:#FFC107;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-.especialidades span:hover{
-
-
-    background:#FF7A00;
+    border-radius:25px;
 
 
     color:#111;
 
 
-}
-
-
-
-
-
-.btn-pedir{
-
-
-    display:inline-block;
-
-
-    padding:18px 60px;
-
-
-    background:#E53935;
-
-
-    color:white;
-
-
-    border-radius:40px;
-
-
-    font-size:22px;
-
-
-    font-weight:bold;
+    text-align:center;
 
 
     transition:.3s;
@@ -1348,7 +1258,7 @@ button{
 
     box-shadow:
 
-    0 10px 25px rgba(229,57,53,.35);
+    0 10px 25px rgba(0,0,0,.3);
 
 
 }
@@ -1357,20 +1267,172 @@ button{
 
 
 
-.btn-pedir:hover{
+.tarjeta-opcion i{
 
 
-    background:#FF7A00;
+    font-size:45px;
+
+
+}
+
+
+
+
+
+.tarjeta-opcion h3{
+
+
+    margin:15px 0;
 
 
     color:#111;
 
 
-    transform:translateY(-5px);
+}
+
+
+
+
+
+.tarjeta-opcion p{
+
+
+    color:#222;
 
 
 }
 
+
+
+
+
+.tarjeta-opcion:hover{
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+
+
+.naranja{
+
+
+    background:#FF7A00;
+
+
+}
+
+
+
+
+
+.amarillo{
+
+
+    background:#FFC107;
+
+
+}
+
+
+
+
+
+.rojo{
+
+
+    background:#E53935;
+
+
+}
+
+
+
+
+
+.tacos-card{
+
+
+    background:#1A1A1A;
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    border:2px solid #2ECC71;
+
+
+}
+
+
+
+
+
+.tacos-card h2{
+
+
+    text-align:center;
+
+
+    color:#2ECC71;
+
+
+}
+
+
+
+
+
+.lista-especialidades{
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    justify-content:center;
+
+
+    gap:15px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+.lista-especialidades span{
+
+
+    background:#252525;
+
+
+    color:#FFC107;
+
+
+    padding:15px 25px;
+
+
+    border-radius:25px;
+
+
+    border:1px solid #FF7A00;
+
+
+}
 
 
 
@@ -1379,31 +1441,20 @@ button{
 @media(max-width:800px){
 
 
-
-.hero-contenido h1{
-
-
-    font-size:38px;
+.opciones-inicio{
 
 
-}
-
-
-
-.hero-contenido h2{
-
-
-    font-size:24px;
+    grid-template-columns:1fr;
 
 
 }
 
 
 
-.hero-contenido p{
+.bienvenida-card h1{
 
 
-    font-size:16px;
+    font-size:35px;
 
 
 }
