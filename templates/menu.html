@@ -2,144 +2,253 @@
 
 {% block contenido %}
 
-<h1 class="titulo-menu">
-    🌮 Menú LOS DOS GARCIAS
-</h1>
 
-<p class="subtitulo-menu">
-    Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
-</p>
+<div class="menu-header">
+
+
+    <h1 class="titulo-menu">
+
+        🌮 MENÚ LOS DOS GARCIAS
+
+    </h1>
+
+
+    <p class="subtitulo-menu">
+
+        Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
+
+    </p>
+
+
+</div>
+
+
+
 
 
 <div class="productos-container">
 
 
+
 {% for producto in productos %}
+
 
 
 <div class="producto-card">
 
 
-<div class="producto-icono">
-    🌮
+
+    <div class="producto-imagen">
+
+
+        {% if producto.imagen %}
+
+            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+
+        {% else %}
+
+            🌮
+
+        {% endif %}
+
+
+    </div>
+
+
+
+
+
+    <div class="producto-info">
+
+
+
+        <h2>
+
+            {{ producto.nombre }}
+
+        </h2>
+
+
+
+
+
+        <p class="descripcion-producto">
+
+            {{ producto.descripcion }}
+
+        </p>
+
+
+
+
+
+        <div class="precio-producto">
+
+            ${{ producto.precio }}
+
+        </div>
+
+
+
+
+
+        <form action="/agregar_carrito" method="POST">
+
+
+            <input
+
+            type="hidden"
+
+            name="id_producto"
+
+            value="{{ producto.id_producto }}"
+
+            >
+
+
+
+            <button class="btn-carrito" type="submit">
+
+
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Agregar pedido
+
+
+            </button>
+
+
+
+        </form>
+
+
+
+    </div>
+
+
 </div>
 
 
-<div class="producto-info">
-
-
-<h2>
-{{ producto.nombre }}
-</h2>
-
-
-<p class="descripcion-producto">
-{{ producto.descripcion }}
-</p>
-
-
-<h3>
-$ {{ producto.precio }}
-</h3>
-
-
-
-<form action="/agregar_carrito" method="POST">
-
-
-<input 
-type="hidden"
-name="id_producto"
-value="{{ producto.id_producto }}"
->
-
-
-<button class="btn-carrito" type="submit">
-
-<i class="fa-solid fa-cart-plus"></i>
-
-Agregar al pedido
-
-</button>
-
-
-</form>
-
-
-</div>
-
-
-</div>
 
 
 {% endfor %}
 
 
+
 </div>
+
+
+
+
+
 
 
 
 <div class="promociones-menu">
 
 
+
 <h2>
-🎉 Promociones LOS DOS GARCIAS
+
+🎉 PROMOCIONES LOS DOS GARCIAS
+
 </h2>
 
 
 
-<div class="promo">
+
+<div class="promo promo-coca">
+
 
 <h3>
-🥤 10 tacos o más
+
+🥤 Compra 10 tacos o más
+
 </h3>
 
+
 <p>
-Refresco de 600 ml gratis.
+
+¡Te regalamos una Coca-Cola de 1 litro!
+
 </p>
+
 
 </div>
 
 
 
-<div class="promo">
+
+
+
+<div class="promo promo-envio">
+
 
 <h3>
-🚚 25 tacos o más
+
+🚚 Compra 25 tacos o más
+
 </h3>
 
+
 <p>
-Envío gratis.
+
+¡Tu envío es completamente gratis!
+
 </p>
 
+
 </div>
 
 
+
 </div>
+
+
+
+
+
 
 
 <div class="card contacto-menu">
 
 
 <h2>
+
 🚚 Servicio a domicilio
+
 </h2>
 
 
+
 <p>
+
 📅 Jueves a Domingo
+
 </p>
 
+
 <p>
+
 ⏰ 7:00 PM - 11:00 PM
+
 </p>
 
+
 <p>
+
 📞 747 427 5925
+
 </p>
+
 
 
 </div>
+
+
+
+
+{% endblock %}
 
 
 {% endblock %}
