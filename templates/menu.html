@@ -7,22 +7,16 @@
 
 
     <h1 class="titulo-menu">
-
         🌮 MENÚ LOS DOS GARCIAS
-
     </h1>
 
 
     <p class="subtitulo-menu">
-
         Desde 1994, llevando el sabor de nuestra tradición hasta la puerta de tu hogar.
-
     </p>
 
 
 </div>
-
-
 
 
 
@@ -32,9 +26,7 @@
 {% for producto in productos %}
 
 
-
 <div class="producto-card">
-
 
 
     <div class="producto-icono">
@@ -45,38 +37,26 @@
 
 
 
-
-
     <div class="producto-info">
 
 
-
         <h2>
-
             {{ producto.nombre }}
-
         </h2>
 
 
 
-
-
         <p class="descripcion-producto">
-
             {{ producto.descripcion }}
-
         </p>
 
 
 
-
-
-        <div class="precio-producto">
+        <h3 class="precio-producto">
 
             $ {{ producto.precio }}
 
-        </div>
-
+        </h3>
 
 
 
@@ -84,31 +64,21 @@
         <form action="/agregar_carrito" method="POST">
 
 
-
-            <input
-
+            <input 
             type="hidden"
-
             name="id_producto"
-
             value="{{ producto.id_producto }}"
-
             >
-
 
 
 
             <button class="btn-carrito" type="submit">
 
-
                 <i class="fa-solid fa-cart-plus"></i>
 
                 Agregar al pedido
 
-
             </button>
-
-
 
 
         </form>
@@ -118,84 +88,59 @@
     </div>
 
 
-
 </div>
-
 
 
 {% endfor %}
 
 
-
 </div>
 
 
 
-
-
-
-
-
-<!-- PROMOCIONES -->
 
 
 <div class="promociones-menu">
 
 
-
-    <h2>
-
-        🎉 PROMOCIONES LOS DOS GARCIAS
-
-    </h2>
+<h2>
+    🎉 PROMOCIONES LOS DOS GARCIAS
+</h2>
 
 
 
-
-    <div class="promo promo-coca">
-
-
-        <h3>
-
-            🥤 Compra 10 tacos o más
-
-        </h3>
+<div class="promo promo-coca">
 
 
-
-        <p>
-
-            Recibe una Coca-Cola de 1 litro totalmente gratis.
-
-        </p>
+<h3>
+    🥤 Compra 10 tacos o más
+</h3>
 
 
-    </div>
+<p>
+    Recibe una Coca-Cola de 1 litro totalmente gratis.
+</p>
+
+
+</div>
 
 
 
 
+<div class="promo promo-envio">
 
 
-    <div class="promo promo-envio">
+<h3>
+    🚚 Compra 25 tacos o más
+</h3>
 
 
-        <h3>
-
-            🚚 Compra 25 tacos o más
-
-        </h3>
+<p>
+    Tu envío es completamente gratis.
+</p>
 
 
-
-        <p>
-
-            Tu envío es completamente gratis.
-
-        </p>
-
-
-    </div>
+</div>
 
 
 
@@ -206,44 +151,27 @@
 
 
 
-
-<!-- CONTACTO -->
-
-
 <div class="card contacto-menu">
 
 
-
-    <h2>
-
-        🚚 Servicio a domicilio
-
-    </h2>
+<h2>
+    🚚 Servicio a domicilio
+</h2>
 
 
-
-    <p>
-
-        📅 Jueves a Domingo
-
-    </p>
+<p>
+    📅 Jueves a Domingo
+</p>
 
 
-
-    <p>
-
-        ⏰ 7:00 PM - 11:00 PM
-
-    </p>
+<p>
+    ⏰ 7:00 PM - 11:00 PM
+</p>
 
 
-
-    <p>
-
-        📞 747 427 5925
-
-    </p>
-
+<p>
+    📞 747 427 5925
+</p>
 
 
 </div>
