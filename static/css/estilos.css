@@ -14,16 +14,15 @@
 }
 
 
-
 body{
 
-    background:#fff8e1;
-    color:#333;
+    background:#111111;
+
+    color:#F5F5F5;
+
+    font-family:'Poppins',sans-serif;
 
 }
-
-
-
 /* =====================================
    MENU LATERAL
 ===================================== */
@@ -31,40 +30,36 @@ body{
 
 .sidebar{
 
-
     position:fixed;
 
     left:0;
+
     top:0;
 
     width:280px;
 
     height:100vh;
 
-    background:
 
-    linear-gradient(
-        180deg,
-        #d32f2f,
-        #f57c00
-    );
+    background:#0F0F0F;
+
+
+    border-right:4px solid #FF7A00;
 
 
     color:white;
 
+
     padding:25px;
 
+
     box-shadow:
-    5px 0 20px rgba(0,0,0,.3);
+    8px 0 25px rgba(0,0,0,.45);
+
 
     z-index:1000;
 
-
 }
-
-
-
-
 .logo{
 
     text-align:center;
@@ -74,38 +69,39 @@ body{
 }
 
 
-
 .logo i{
 
-    font-size:45px;
+    font-size:55px;
 
-    color:#ffd54f;
+    color:#FF7A00;
+
+    margin-bottom:10px;
 
 }
-
 
 
 .logo h2{
 
-    font-size:32px;
+    font-size:30px;
 
-    letter-spacing:2px;
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:3px;
 
 }
-
 
 
 .logo p{
 
-    color:#ffd54f;
+    color:#999;
 
     font-weight:bold;
 
+    margin-top:8px;
+
 }
-
-
-
-
 
 /* =====================================
    NAVEGACION
@@ -124,22 +120,23 @@ body{
 
     text-decoration:none;
 
-    color:white;
+
+    color:#DDDDDD;
 
 
-    padding:15px;
+    padding:15px 18px;
 
 
     margin:10px 0;
 
 
-    border-radius:15px;
+    border-radius:14px;
 
 
-    font-size:18px;
+    font-size:17px;
 
 
-    transition:.3s;
+    transition:.25s;
 
 
 }
@@ -148,50 +145,69 @@ body{
 
 .sidebar nav a i{
 
+
     width:25px;
+
 
     font-size:20px;
 
-}
 
+    color:#FF7A00;
+
+
+}
 
 
 
 .sidebar nav a:hover{
 
 
-    background:#fbc02d;
+    background:#FF7A00;
 
-    color:#b71c1c;
 
-    transform:translateX(10px);
+    color:#111;
+
+
+    transform:translateX(8px);
 
 
 }
 
 
 
+.sidebar nav a:hover i{
+
+
+    color:#111;
+
+
+}
 
 .info{
 
 
     position:absolute;
 
-    bottom:30px;
+
+    bottom:25px;
 
 
-    background:
-
-    rgba(0,0,0,.2);
+    width:230px;
 
 
-    padding:15px;
+    background:#1D1D1D;
+
+
+    border:1px solid #333;
 
 
     border-radius:15px;
 
 
-    width:230px;
+    padding:18px;
+
+
+    color:#BBBBBB;
 
 
     font-size:14px;
@@ -200,6 +216,13 @@ body{
 }
 
 
+.info p{
+
+
+    margin:10px 0;
+
+
+}
 
 
 
