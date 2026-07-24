@@ -1075,3 +1075,334 @@ button{
 
 
 }
+/* =====================================
+   PAGINA PRINCIPAL
+===================================== */
+
+
+.inicio-container{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.inicio-card{
+
+
+    max-width:700px;
+
+    width:100%;
+
+
+    background:#1A1A1A;
+
+
+    border:3px solid #FF7A00;
+
+
+    border-radius:30px;
+
+
+    padding:45px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(255,122,0,.25);
+
+
+}
+
+
+
+
+
+.inicio-icono{
+
+
+    font-size:80px;
+
+
+    margin-bottom:15px;
+
+
+    animation:flotar 3s infinite;
+
+
+}
+
+
+
+
+
+.titulo-inicio{
+
+
+    color:#FF7A00;
+
+
+    font-size:45px;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+.frase-inicio{
+
+
+    margin-top:15px;
+
+
+    color:#FFC107;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+.texto-inicio{
+
+
+    color:#FFB74D;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+.separador{
+
+
+    width:80px;
+
+
+    height:4px;
+
+
+    background:#E53935;
+
+
+    margin:25px auto;
+
+
+    border-radius:10px;
+
+
+}
+
+
+
+
+
+.lista-tacos{
+
+
+    list-style:none;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:15px;
+
+
+    margin:30px 0;
+
+
+}
+
+
+
+
+
+.lista-tacos li{
+
+
+    background:#111;
+
+
+    border:1px solid #FF7A00;
+
+
+    border-radius:15px;
+
+
+    padding:12px;
+
+
+    color:#FFC107;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.lista-tacos li:hover{
+
+
+    background:#FF7A00;
+
+
+    color:#111;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+.btn-inicio{
+
+
+    display:inline-block;
+
+
+    background:#FF7A00;
+
+
+    color:#111;
+
+
+    padding:15px 40px;
+
+
+    border-radius:30px;
+
+
+    font-size:20px;
+
+
+    font-weight:bold;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.btn-inicio:hover{
+
+
+    background:#E53935;
+
+
+    color:white;
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+
+@keyframes flotar{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+.inicio-card{
+
+
+    padding:25px;
+
+
+}
+
+
+
+.titulo-inicio{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.frase-inicio{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.lista-tacos{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
