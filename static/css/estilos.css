@@ -1076,50 +1076,92 @@ button{
 
 }
 /* =====================================
-   PAGINA PRINCIPAL
+   HERO PRINCIPAL
 ===================================== */
 
 
-.inicio-container{
+.hero-inicio{
 
-    min-height:80vh;
+
+    min-height:85vh;
+
 
     display:flex;
 
+
     justify-content:center;
 
+
     align-items:center;
-
-}
-
-
-
-.inicio-card{
-
-
-    max-width:700px;
-
-    width:100%;
-
-
-    background:#1A1A1A;
-
-
-    border:3px solid #FF7A00;
-
-
-    border-radius:30px;
-
-
-    padding:45px;
 
 
     text-align:center;
 
 
+    background:
+
+    radial-gradient(
+
+        circle at top,
+
+        #3a1c00,
+
+        #111 55%
+
+    );
+
+
+}
+
+
+
+
+
+.hero-contenido{
+
+
+    max-width:850px;
+
+
+    padding:40px;
+
+
+}
+
+
+
+
+
+.marca{
+
+
+    width:100px;
+
+
+    height:100px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border-radius:50%;
+
+
+    background:#FF7A00;
+
+
     box-shadow:
 
-    0 15px 40px rgba(255,122,0,.25);
+    0 0 35px rgba(255,122,0,.5);
 
 
 }
@@ -1128,16 +1170,13 @@ button{
 
 
 
-.inicio-icono{
+.marca i{
 
 
-    font-size:80px;
+    font-size:50px;
 
 
-    margin-bottom:15px;
-
-
-    animation:flotar 3s infinite;
+    color:#111;
 
 
 }
@@ -1146,16 +1185,24 @@ button{
 
 
 
-.titulo-inicio{
+.hero-contenido h1{
+
+
+    margin-top:30px;
+
+
+    font-size:65px;
+
+
+    letter-spacing:5px;
 
 
     color:#FF7A00;
 
 
-    font-size:45px;
+    text-shadow:
 
-
-    letter-spacing:3px;
+    0 5px 20px rgba(255,122,0,.3);
 
 
 }
@@ -1164,7 +1211,7 @@ button{
 
 
 
-.frase-inicio{
+.hero-contenido h2{
 
 
     margin-top:15px;
@@ -1173,7 +1220,7 @@ button{
     color:#FFC107;
 
 
-    font-size:22px;
+    font-size:32px;
 
 
 }
@@ -1182,61 +1229,46 @@ button{
 
 
 
-.texto-inicio{
+.hero-contenido p{
+
+
+    margin:30px auto;
+
+
+    max-width:650px;
+
+
+    font-size:20px;
+
+
+    line-height:1.7;
 
 
     color:#FFB74D;
 
 
-    font-size:18px;
-
-
 }
 
 
 
 
 
-.separador{
+.especialidades{
 
 
-    width:80px;
+    display:flex;
 
 
-    height:4px;
+    justify-content:center;
 
 
-    background:#E53935;
-
-
-    margin:25px auto;
-
-
-    border-radius:10px;
-
-
-}
-
-
-
-
-
-.lista-tacos{
-
-
-    list-style:none;
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(2,1fr);
+    flex-wrap:wrap;
 
 
     gap:15px;
 
 
-    margin:30px 0;
+    margin:35px 0;
 
 
 }
@@ -1245,25 +1277,25 @@ button{
 
 
 
-.lista-tacos li{
+.especialidades span{
 
 
-    background:#111;
+    padding:12px 25px;
+
+
+    border-radius:30px;
+
+
+    background:#1A1A1A;
 
 
     border:1px solid #FF7A00;
 
 
-    border-radius:15px;
-
-
-    padding:12px;
-
-
     color:#FFC107;
 
 
-    transition:.3s;
+    font-weight:bold;
 
 
 }
@@ -1271,7 +1303,61 @@ button{
 
 
 
-.lista-tacos li:hover{
+
+.especialidades span:hover{
+
+
+    background:#FF7A00;
+
+
+    color:#111;
+
+
+}
+
+
+
+
+
+.btn-pedir{
+
+
+    display:inline-block;
+
+
+    padding:18px 60px;
+
+
+    background:#E53935;
+
+
+    color:white;
+
+
+    border-radius:40px;
+
+
+    font-size:22px;
+
+
+    font-weight:bold;
+
+
+    transition:.3s;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(229,57,53,.35);
+
+
+}
+
+
+
+
+
+.btn-pedir:hover{
 
 
     background:#FF7A00;
@@ -1288,121 +1374,39 @@ button{
 
 
 
-.btn-inicio{
-
-
-    display:inline-block;
-
-
-    background:#FF7A00;
-
-
-    color:#111;
-
-
-    padding:15px 40px;
-
-
-    border-radius:30px;
-
-
-    font-size:20px;
-
-
-    font-weight:bold;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-
-.btn-inicio:hover{
-
-
-    background:#E53935;
-
-
-    color:white;
-
-
-    transform:scale(1.05);
-
-
-}
-
-
-
-
-
-@keyframes flotar{
-
-
-    0%,100%{
-
-        transform:translateY(0);
-
-    }
-
-
-    50%{
-
-        transform:translateY(-12px);
-
-    }
-
-
-}
-
-
-
 
 
 @media(max-width:800px){
 
 
-.inicio-card{
+
+.hero-contenido h1{
 
 
-    padding:25px;
-
-
-}
-
-
-
-.titulo-inicio{
-
-
-    font-size:32px;
+    font-size:38px;
 
 
 }
 
 
 
-.frase-inicio{
+.hero-contenido h2{
 
 
-    font-size:18px;
-
-
-}
-
-
-
-.lista-tacos{
-
-
-    grid-template-columns:1fr;
+    font-size:24px;
 
 
 }
 
+
+
+.hero-contenido p{
+
+
+    font-size:16px;
+
+
+}
 
 
 }
