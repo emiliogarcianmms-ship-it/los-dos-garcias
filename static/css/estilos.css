@@ -1461,3 +1461,344 @@ button{
 
 
 }
+/* =====================================
+   MENU PRODUCTOS MODERNO
+===================================== */
+
+
+.menu-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.titulo-menu{
+
+    font-size:45px;
+
+    color:#FF7A00;
+
+}
+
+
+
+.subtitulo-menu{
+
+    color:#FFC107;
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.producto-card{
+
+
+    background:#1A1A1A;
+
+
+    border-radius:30px;
+
+
+    overflow:hidden;
+
+
+    border:2px solid #FF7A00;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.4);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.producto-card:hover{
+
+
+    transform:translateY(-10px);
+
+
+    border-color:#FFC107;
+
+
+}
+
+
+
+
+
+
+.producto-imagen{
+
+
+    height:180px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #E53935,
+        #FF7A00
+    );
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:90px;
+
+
+}
+
+
+
+
+.producto-imagen img{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+.producto-info{
+
+
+    padding:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.producto-info h2{
+
+
+    color:#FF7A00;
+
+
+    font-size:27px;
+
+
+}
+
+
+
+.descripcion-producto{
+
+
+    color:#FFB74D;
+
+
+    min-height:50px;
+
+
+}
+
+
+
+
+
+.precio-producto{
+
+
+    margin:20px;
+
+
+    font-size:32px;
+
+
+    font-weight:bold;
+
+
+    color:#2ECC71;
+
+
+}
+
+
+
+
+
+.btn-carrito{
+
+
+    width:100%;
+
+
+    background:#FF7A00;
+
+
+    color:#111;
+
+
+}
+
+
+
+.btn-carrito:hover{
+
+
+    background:#FFC107;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   PROMOCIONES
+===================================== */
+
+
+.promociones-menu{
+
+
+    margin-top:50px;
+
+
+    background:#111;
+
+
+    border-radius:30px;
+
+
+    padding:30px;
+
+
+    border:3px solid #FFC107;
+
+
+}
+
+
+
+.promociones-menu h2{
+
+
+    text-align:center;
+
+
+    color:#FFC107;
+
+
+}
+
+
+
+
+
+.promo{
+
+
+    margin-top:20px;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+.promo h3{
+
+
+    color:#111;
+
+
+}
+
+
+
+
+
+.promo p{
+
+
+    color:#111;
+
+
+}
+
+
+
+
+
+.promo-coca{
+
+
+    background:#E53935;
+
+
+}
+
+
+
+
+
+.promo-envio{
+
+
+    background:#2ECC71;
+
+
+}
+
+
+
+
+
+
+.contacto-menu{
+
+
+    margin-top:40px;
+
+
+    border:2px solid #2196F3;
+
+
+}
